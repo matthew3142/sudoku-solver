@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Sudoku Solver</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1> Sudoku Solver </h1>
+  <script src="script.js"> </script>
+  <table>
+    <tr>
+      <td class=" borderleft bordertop "><textarea id="0" oninput="handleInput(event)"></textarea></td>
+      <td class=" bordertop "><textarea id="1" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright bordertop "><textarea id="2" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft bordertop "><textarea id="3" oninput="handleInput(event)"></textarea></td>
+      <td class=" bordertop "><textarea id="4" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright bordertop "><textarea id="5" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft bordertop "><textarea id="6" oninput="handleInput(event)"></textarea></td>
+      <td class=" bordertop "><textarea id="7" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright bordertop "><textarea id="8" oninput="handleInput(event)"></textarea></td>
+    </tr>
+    <tr>
+      <td class=" borderleft "><textarea id="9" oninput="handleInput(event)"></textarea></td>
+      <td class=" "><textarea id="10" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright "><textarea id="11" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft "><textarea id="12" oninput="handleInput(event)"></textarea></td>
+      <td class=" "><textarea id="13" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright "><textarea id="14" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft "><textarea id="15" oninput="handleInput(event)"></textarea></td>
+      <td class=" "><textarea id="16" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright "><textarea id="17" oninput="handleInput(event)"></textarea></td>
+    </tr>
+    <tr>
+      <td class=" borderleft borderbottom "><textarea id="18" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderbottom "><textarea id="19" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright borderbottom "><textarea id="20" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft borderbottom "><textarea id="21" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderbottom "><textarea id="22" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright borderbottom "><textarea id="23" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft borderbottom "><textarea id="24" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderbottom "><textarea id="25" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright borderbottom "><textarea id="26" oninput="handleInput(event)"></textarea></td>
+    </tr>
+    <tr>
+      <td class=" borderleft bordertop "><textarea id="27" oninput="handleInput(event)"></textarea></td>
+      <td class=" bordertop "><textarea id="28" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright bordertop "><textarea id="29" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft bordertop "><textarea id="30" oninput="handleInput(event)"></textarea></td>
+      <td class=" bordertop "><textarea id="31" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright bordertop "><textarea id="32" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft bordertop "><textarea id="33" oninput="handleInput(event)"></textarea></td>
+      <td class=" bordertop "><textarea id="34" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright bordertop "><textarea id="35" oninput="handleInput(event)"></textarea></td>
+    </tr>
+    <tr>
+      <td class=" borderleft "><textarea id="36" oninput="handleInput(event)"></textarea></td>
+      <td class=" "><textarea id="37" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright "><textarea id="38" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft "><textarea id="39" oninput="handleInput(event)"></textarea></td>
+      <td class=" "><textarea id="40" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright "><textarea id="41" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft "><textarea id="42" oninput="handleInput(event)"></textarea></td>
+      <td class=" "><textarea id="43" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright "><textarea id="44" oninput="handleInput(event)"></textarea></td>
+    </tr>
+    <tr>
+      <td class=" borderleft borderbottom "><textarea id="45" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderbottom "><textarea id="46" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright borderbottom "><textarea id="47" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft borderbottom "><textarea id="48" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderbottom "><textarea id="49" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright borderbottom "><textarea id="50" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft borderbottom "><textarea id="51" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderbottom "><textarea id="52" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright borderbottom "><textarea id="53" oninput="handleInput(event)"></textarea></td>
+    </tr>
+    <tr>
+      <td class=" borderleft bordertop "><textarea id="54" oninput="handleInput(event)"></textarea></td>
+      <td class=" bordertop "><textarea id="55" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright bordertop "><textarea id="56" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft bordertop "><textarea id="57" oninput="handleInput(event)"></textarea></td>
+      <td class=" bordertop "><textarea id="58" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright bordertop "><textarea id="59" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft bordertop "><textarea id="60" oninput="handleInput(event)"></textarea></td>
+      <td class=" bordertop "><textarea id="61" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright bordertop "><textarea id="62" oninput="handleInput(event)"></textarea></td>
+    </tr>
+    <tr>
+      <td class=" borderleft "><textarea id="63" oninput="handleInput(event)"></textarea></td>
+      <td class=" "><textarea id="64" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright "><textarea id="65" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft "><textarea id="66" oninput="handleInput(event)"></textarea></td>
+      <td class=" "><textarea id="67" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright "><textarea id="68" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft "><textarea id="69" oninput="handleInput(event)"></textarea></td>
+      <td class=" "><textarea id="70" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright "><textarea id="71" oninput="handleInput(event)"></textarea></td>
+    </tr>
+    <tr>
+      <td class=" borderleft borderbottom "><textarea id="72" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderbottom "><textarea id="73" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright borderbottom "><textarea id="74" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft borderbottom "><textarea id="75" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderbottom "><textarea id="76" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright borderbottom "><textarea id="77" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderleft borderbottom "><textarea id="78" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderbottom "><textarea id="79" oninput="handleInput(event)"></textarea></td>
+      <td class=" borderright borderbottom "><textarea id="80" oninput="handleInput(event)"></textarea></td>
+    </tr>
+  </table>
+
+  <p> <button onclick="findsolutions()"> Solve </button> Status: <span id="status">Free</span></p>
+  <p> See the README for more details on how the algorithm works </p>
+</body>
+
+</html>
